@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <deployment version="1280" defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigator Main View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="STLNavigatorMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="13">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="14">
+                                        <barButtonItem key="rightBarButtonItem" title="Info" id="15">
+                                            <connections>
+                                                <action selector="togglePopover:" destination="2" id="23"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <glkView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" drawableDepthFormat="24" id="Ejx-Ax-jT9">
+                                <rect key="frame" x="-70" y="25" width="908" height="1052"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uGZ-ca-eyy">
+                                        <rect key="frame" x="71" y="964" width="488" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="JKO-wH-e5T">
+                                        <rect key="frame" x="436" y="483" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </activityIndicatorView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="knot_big.png" id="Dbr-fF-2KT">
+                                        <rect key="frame" x="790" y="947" width="44" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </glkView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="glview" destination="Ejx-Ax-jT9" id="0ny-bu-jtl"/>
+                        <outlet property="loadActivityIndicator" destination="JKO-wH-e5T" id="5XF-6D-We9"/>
+                        <outlet property="navItem" destination="14" id="4jc-Hb-QUv"/>
+                        <outlet property="options" destination="Dbr-fF-2KT" id="GVv-6U-HB8"/>
+                        <outlet property="warningLabel" destination="uGZ-ca-eyy" id="tFy-VK-n8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1309" y="-1301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="knot_big.png" width="256" height="273"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
